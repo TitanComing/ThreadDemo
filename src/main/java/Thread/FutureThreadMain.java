@@ -18,6 +18,9 @@ public class FutureThreadMain {
             futureList.add(random);
         }
 
+        //这个地方不好处理多个线程同步的问题，主线程不好协调多个线程
+        //线程处理完之后就返回结果分两种情况：
+        // 1. 主线程依赖子线程结果，这时候主线程必须等待子线程处理 2. 主线程不需要依赖子线程处理结果，可以让子线程自行处理，可以参考CompletaFutre
         for(Future<String> future : futureList){
             System.out.println("Done: " + future.get());
         }
