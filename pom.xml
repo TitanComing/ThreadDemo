@@ -25,5 +25,11 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.8</version>
         </dependency>
+        <!--配合hutool进行国密运算-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>1.72</version>
+        </dependency>
     </dependencies>
 </project>
